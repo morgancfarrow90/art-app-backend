@@ -24,13 +24,14 @@ ActiveRecord::Schema.define(version: 2020_07_22_180356) do
 
   create_table "artworks", force: :cascade do |t|
     t.string "title"
-    t.integer "artist_id"
+    t.bigint "artist_id"
     t.string "image_url"
     t.string "year"
     t.text "description"
     t.integer "likes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["artist_id"], name: "index_artworks_on_artist_id"
   end
 
 end
