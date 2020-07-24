@@ -17,7 +17,7 @@ class Api::V1::ArtworksController < ApplicationController
   private
 
   def artwork_params
-    params.require(artwork).permit(:title, :image_url, :year, :description, :likes, :artist_id)
+    params.require(:artwork).permit(:title, :image_url, :year, :description, :likes, :artist_id)
   end
 
 end

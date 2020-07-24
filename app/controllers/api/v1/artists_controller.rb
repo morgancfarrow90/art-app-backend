@@ -17,7 +17,7 @@ class Api::V1::ArtistsController < ApplicationController
   private
 
   def artist_params
-    params.require(artist).permit(:name, :biography)
+    params.require(:artist).permit(:name, :biography)
   end
 
 end
